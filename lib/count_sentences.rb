@@ -27,15 +27,8 @@ class String
   end
 
   def count_sentences
-    num = 0
-    index = 0
-    while self[index] != nil
-      if self[index]!= slef[index+1] && 
-        (self[index]=="!"||self[index]=="."||self[index]=="?")
-        num += 1
-      end
-    end
-    return num
+    split_strings = self.split(/[!?.]+/)
+    split_strings.size
   end
   
 end
